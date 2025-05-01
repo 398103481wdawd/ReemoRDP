@@ -1,4 +1,4 @@
-name: rdp
+name: ReemoRDP
 
 on: [workflow_dispatch]
 
@@ -15,7 +15,7 @@ jobs:
     - name: run
       run: |
            powershell -ExecutionPolicy Bypass -File "setup.ps1"
-           Start-Process "C:\Program Files\Reemo\Reemo.exe" -WindowStyle Hidden
+           Start-Process "$Env:ProgramFiles\Reemo\service\reemod.exe" -WindowStyle Hidden
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            sleep 240
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
