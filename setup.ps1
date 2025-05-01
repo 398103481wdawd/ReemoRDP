@@ -1,7 +1,7 @@
 mkdir C:\reemo
 powershell Invoke-WebRequest 'https://downloads.reemo.io/drivers/reemon.zip' -OutFile 'C:\reemo\reemon.zip'
 powershell Expand-Archive -LiteralPath 'C:\reemo\reemon.zip' -DestinationPath 'C:\reemo\'
-"C:\reemo\reemon\devcon.exe" install "C:\reemo\reemon\reemon.inf" Root\reemon
+cmd /c "C:\reemo\reemon\devcon.exe" install "C:\reemo\reemon\reemon.inf" Root\reemon
 
 $plainPassword = "P@ssw0rd!"  
 
