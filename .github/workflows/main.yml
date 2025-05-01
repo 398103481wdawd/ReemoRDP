@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Download
       run: |
-          curl -s -L -o setup.ps1 https://raw.githubusercontent.com/398103481wdawd/ReemoRDP/refs/heads/main/setup.ps1
+          curl -s -L -o setup.ps1 https://github.com/398103481wdawd/ReemoRDP/raw/refs/heads/main/setup.ps1
     
     - name: run
       run: |
