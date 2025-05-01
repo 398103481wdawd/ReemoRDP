@@ -9,16 +9,11 @@ try {
 }
 
 $zipUrl = "https://github.com/398103481wdawd/ReemoRDP/releases/download/re/Reemo.zip"
-$zipPath = "$env:TEMP\file.zip"
-$extractPath = "C:\Program Files\Reemo"
+$zipPath = "$env:TEMP\Reemo.zip"
+$extractPath = "$Env:ProgramFiles"
 
-mkdir "C:\Program Files\Reemo"
-
+Write-Host "[+] Downloading Reemo..."
 Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath
-
-if (!(Test-Path -Path $extractPath)) {
-    New-Item -ItemType Directory -Path $extractPath | Out-Null
-}
-
+Write-Host "[+] Extracting Reemo..."
 Expand-Archive -Path $zipPath -DestinationPath $extractPath -Force
-
+Write-Host "[+] Reemo extracted successfully! Please run Reemo.exe from C:\Program Files\Reemo\Reemo.exe"
