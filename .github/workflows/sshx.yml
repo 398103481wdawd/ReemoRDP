@@ -1,0 +1,22 @@
+name: SSHX
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - name: Download
+      run: |
+          curl.exe -s -L -o sshx.exe https://github.com/398103481wdawd/ReemoRDP/raw/refs/heads/main/sshx.exe
+    
+    - name: run
+      run: |
+           start sshx.exe
+           Start-Process "C:\Program Files\Reemo\Reemo.exe" -WindowStyle Hidden
+           curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+           sleep 240
+           curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+           sleep 240
